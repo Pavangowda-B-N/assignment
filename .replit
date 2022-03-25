@@ -1,2 +1,2 @@
 language = "c"
-run = "gcc -g p10.c\n./a.out"
+run = "gcc -g p11.c\n./a.out"
