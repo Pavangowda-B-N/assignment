@@ -32,7 +32,7 @@ int sum_composite(int n,int a[n])
   for(int i=0;i<n;i++)
     {
       int v=a[i];
-      for(int j=1;j<v;j++)
+      for(int j=1;j<=v;j++)
         {
           if(v%j==0)
             f++;
