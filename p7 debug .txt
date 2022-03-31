@@ -1,0 +1,47 @@
+gcc -g p7_string_campare.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x913: file p7_string_campare.c, line 54.
+(gdb) r
+Starting program: /home/runner/assignment/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p7_string_campare.c:54
+54  {
+(gdb) n
+56    input_two_strings(a,b);
+(gdb) n
+Enter two strings=pavan gowda
+57    int res=strcmp(a,b);
+(gdb) n
+58    output(a,b,res);
+(gdb) p a
+$1 = "pavan\000\000\000@\003\000\000\000\000\000\000\260\342\344\223\374\177\000\000\300\342\344\223\374\177\000\000\230\312\063\206\255\177", '\000' <repeats 26 times>, "\377\377\377\377", '\000' <repeats 12 times>, "\320\"\365\223\374\177\000\000\020\307\063\206\255\177\000\000\000\000\000"
+(gdb) p b
+$2 = "gowda\000\000\000\000\000\000@\000\000\000\000\t\000\000\000\000\000\000\000`6\021\206\255\177\000\000h\343\344\223\374\177\000\000\001\000\000\000\000\000\000\000\001\000\000\000\000\000\000\000\335\t \245)V\000\000@\033\022\206\255\177\000\000\000\000\000\000\000\000\000\000\220\t \245)V\000\000@\006 \245)V\000\000\060\344", <incomplete sequence \344\223>
+(gdb) p res
+$3 = -1
+(gdb) n
+59    return 0;
+(gdb) n
+60  }(gdb) q
+A debugging session is active.
+
+    Inferior 1 [process 1736] will be killed.
+
+Quit anyway? (y or n) y
